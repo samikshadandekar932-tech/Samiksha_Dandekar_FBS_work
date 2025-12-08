@@ -1,7 +1,111 @@
+/Assignment0
+Q1 Write a c program to add two integers and display the result.
 #incude <stdio.h>
 int main()
 {
 int a=10, b=20;
 c=a+b;
+printf("c = %d", c);
 return0;
 }
+
+Q2 Area of circle
+#include <stdio.h>
+int main()
+{
+float radius = 5, area=3.14
+float aoc;
+aoc = area*radius*radius;
+printf("Area od Circle is, %f"aoc);
+return 0 ;
+}
+
+Q3 c program for convert celsius into fahrenheit using the formula F=(c*9/5)+32.
+#include <stdio.h>
+int main()
+{
+Float c=0;
+Float F=(c*9/5)+32;
+printf("%d,"F);
+return0;
+}
+Q4 Swap two numbers using a temporary third variable.
+#include<stdio.h>
+int main()
+{
+int a=10;
+int b=20;
+int temp;
+temp=a;
+a=b;
+b=temp;
+printf("After swapping:,"a=%d,b=%d,a,b);
+return0;
+}
+Q5 Program for five input numbers and find its average.
+#include<stdio.h>
+int main()
+{
+int a=1,b=2,c=3,d=4,e=5;
+int f=a+b+c+d+e;
+av=f/5;
+printf("Average is,%d"av);
+}
+Q6 Find square and cube of given number.
+#include<stdio.h>
+int main()
+{
+int a=2;
+int square=a*a;
+int cube=a*a*a;
+printf("The squere is,%d" "The cube is,%d"squere,cube);
+return 0;
+}
+Q7 Convert given minutes into hours and remaining minutes.
+#include<stdio.h>
+int main()
+{
+int a=333;
+int hours=a/60;
+int min=a%60;
+printf("The hours is,%d","The remaining minutes is,%d"hours,min);
+return0;
+}
+Q8 input length and width of rectangle and find its perimeter.
+#include<stdio.h>
+int main()
+{
+int length=10, width=20;
+int a=2*(length+width);
+printf("The perimeter is,%d"a);
+return0;
+}
+Q9 Input the base and height of tringle and calculate its area.
+#include<stdio.h>
+int main()
+{
+int base=3,height=5;
+int area;
+area=1/2*base*height;
+printf("The area of rectangle is,%d"area);
+return0;
+}
+Q10 Input marks of 5 subjects, find total marks, and calculate the percentage.
+#include<stdio.h>
+int main()
+{
+int a=30,b=30,c=30,d=30,e=30;
+int tm=a+b+c+d+e;
+per=tm/100;
+printf("The percentage is,%d"per);
+return0;
+}
+
+
+
+
+
+
+
+
+
