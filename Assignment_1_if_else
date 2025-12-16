@@ -1,0 +1,142 @@
+1 Program for to check given number is even or odd.
+#include <stdio.h>
+
+int main() {
+   int no=139;
+   if(no%2==0)
+   {
+       printf("no is even");
+   }
+   else{
+       printf("no is odd");
+   }
+
+    return 0;
+}
+2 Program for to check given number is pallindrome or not.
+#include<stdio.h>
+int main()
+{
+int n=121;
+int digit;
+int temp = n;
+int rev = 0;
+while(n > 0)
+{
+    digit = n % 10;
+    rev = rev * 10 + digit;
+    n = n / 10;
+}
+
+if(temp == rev)
+{
+    printf("Palindrome");
+}
+else
+{
+    printf("Not Palindrome");
+}
+}
+3  Program for to check given year is leap year or not.
+#include <stdio.h>
+
+int main()
+{
+    int year = 2012;
+    if (year % 400 == 0)
+    {
+        printf("Leap Year");
+    }
+    else if (year % 4 == 0 && year % 100 != 0)
+    {
+        printf("Leap Year");
+    }
+    else
+    {
+        printf("Not Leap Year");
+    }
+ return 0;
+}
+4 Program for to check given character is vowel or consonant.
+#include <stdio.h>
+
+int main() {
+   int ch='z';
+    if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
+    ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
+    {
+    printf("vowel");
+}
+else
+{
+    printf("Consonant");
+}
+return 0;
+}
+5 Write a program to check whether a person is eligible to vote (age ≥ 18).
+ #include<stdio.h>
+int main(){
+    int age=30;
+    if(age>18)
+    {
+        printf("Eligible");
+    }
+    else
+    {
+        printf("No Eligible");
+    }
+    return 0;
+}
+6 Program for check given character is uppercase or lowercase.
+#include <stdio.h>
+
+int main()
+{
+    char ch = 'a';
+
+    if (ch >= 'A' && ch <= 'Z')
+    {
+        printf("Uppercase");
+    }
+    else if (ch >= 'a' && ch <= 'z')
+    {
+        printf("Lowercase");
+    }
+    else
+    {
+        printf("Not an alphabet");
+    }
+
+    return 0;
+}
+7Calculating total salary based on basic. If basic <=5000 da, ta and hra will be
+10%,20% and 25% respectively otherwise da, ta and hra will be 15%,25% and 30%
+respectively.
+#include <stdio.h>
+
+int main()
+{
+    float basic = 4500;
+    float da, ta, hra, total;
+
+    if (basic <= 5000)
+    {
+        da  = basic * 10 / 100;
+        ta  = basic * 20 / 100;
+        hra = basic * 25 / 100;
+    }
+    else
+    {
+        da  = basic * 15 / 100;
+        ta  = basic * 25 / 100;
+        hra = basic * 30 / 100;
+    }
+
+    total = basic + da + ta + hra;
+
+    printf("Total Salary = %.2f", total);
+
+    return 0;
+}
+
+
