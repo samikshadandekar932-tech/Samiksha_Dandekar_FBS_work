@@ -1,0 +1,64 @@
+Function
+1. Convert Ass_1 and ASS_2 program into functions with four types of function.
+1. Write a program to check whether a number is even or odd.(without parameter and without return type)
+#include<stdio.h>
+void evenodd();
+int main(){
+	evenodd();
+	return 0;
+}
+void evenodd()
+{
+	int no=7;
+	if(no%2==0){
+	printf("Even",no);	
+}
+	else
+	{
+	printf("Odd",no);
+}
+	
+}
+(With parameter and without return type)
+#include<stdio.h>
+void evenodd(int );
+int main(){
+	int no=7;
+	evenodd(no);
+	return 0;
+}
+void evenodd(int no)
+{
+	
+	if(no%2==0){
+	printf("Even",no);	
+}
+	else
+	{
+	printf("Odd",no);
+}
+	
+}
+(without parameter with return type)
+#include<stdio.h>
+int evenodd();
+int main(){
+	evenodd();
+}
+int evenodd()
+{
+	int no=7;
+	if(no%2==0){
+	printf("Even",no);	
+}
+	else
+	{
+	printf("Odd",no);
+}
+return 0;
+
+	
+}
+	
+	
+	
