@@ -1,0 +1,239 @@
+1. Print armstrong numbers in the given range 1 to n.
+#include<stdio.h>
+int main(){
+	int no=154;
+	int temp=no;
+    int rem;
+	int sum=0;
+	for(int i=0; temp!=0;i++)
+	{
+		rem=temp%10;
+		sum=sum + rem*rem*rem;
+		temp=temp/10;
+	}
+	if(sum==no)
+	printf("Armstrong no");
+	else
+	printf("Not Armstrong No");
+	return 0;
+	
+}
+2. Print prime numbers in the given range 1 to n.
+#include <stdio.h>
+
+int main()
+{
+    int n;
+
+    printf("Enter the value of n: ");
+    scanf("%d", &n);
+
+    for (int i = 2; i <= n; i++)
+    {
+        int count = 0;
+
+        for (int j = 1; j <= i; j++)
+        {
+            if (i % j == 0)
+            {
+                count++;
+            }
+        }
+
+        if (count == 2)
+        {
+            printf("%d ", i);
+        }
+    }
+
+    return 0;
+}
+3. Print perfect numbers in the given range 1 to n.
+#include <stdio.h>
+
+int main()
+{
+    int n;
+
+    printf("Enter the value of n: ");
+    scanf("%d", &n);
+
+    for(int i = 1; i <= n; i++)
+    {
+        int sum = 0;
+
+        for(int j = 1; j < i; j++)
+        {
+            if(i % j == 0)
+            {
+                sum = sum + j;
+            }
+        }
+
+        if(sum == i)
+        {
+            printf("%d ", i);
+        }
+    }
+
+    return 0;
+}
+4. Print strong numbers in the given range 1 to n.
+#include <stdio.h>
+
+int main()
+{
+    int n;
+
+    printf("Enter the value of n: ");
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++)
+    {
+        int temp = i;
+        int sum = 0;
+
+        while (temp != 0)
+        {
+            int rem = temp % 10;
+            int fact = 1;
+
+            for (int j = 1; j <= rem; j++)
+            {
+                fact = fact * j;
+            }
+
+            sum = sum + fact;
+            temp = temp / 10;
+        }
+
+        if (sum == i)
+        {
+            printf("%d ", i);
+        }
+    }
+
+    return 0;
+}
+5. Write a menu driven program to take a number for user and perform operations as follows.
+
+Press 1.To check number is even or odd.
+2.To check number is prime or not.
+3.To check number is pallindrome or not.
+4.To check number is positive, negative or zero.
+5.To reverse a number.
+6.To find sum of digits.
+#include <stdio.h>
+
+int main()
+{
+    int no, choice;
+
+    printf("Enter a number: ");
+    scanf("%d", &no);
+
+    printf("\n----- MENU -----\n");
+    printf("1. Check Even or Odd\n");
+    printf("2. Check Prime or Not\n");
+    printf("3. Check Palindrome or Not\n");
+    printf("4. Check Positive, Negative or Zero\n");
+    printf("5. Reverse a Number\n");
+    printf("6. Sum of Digits\n");
+
+    printf("\nEnter your choice: ");
+    scanf("%d", &choice);
+
+    switch(choice)
+    {
+        case 1:
+            if(no % 2 == 0)
+                printf("%d is Even.", no);
+            else
+                printf("%d is Odd.", no);
+            break;
+
+        case 2:
+        {
+            int count = 0;
+
+            for(int i = 1; i <= no; i++)
+            {
+                if(no % i == 0)
+                    count++;
+            }
+
+            if(count == 2)
+                printf("%d is Prime.", no);
+            else
+                printf("%d is Not Prime.", no);
+
+            break;
+        }
+
+        case 3:
+        {
+            int temp = no;
+            int rev = 0, rem;
+
+            while(temp != 0)
+            {
+                rem = temp % 10;
+                rev = rev * 10 + rem;
+                temp = temp / 10;
+            }
+
+            if(rev == no)
+                printf("%d is Palindrome.", no);
+            else
+                printf("%d is Not Palindrome.", no);
+
+            break;
+        }
+
+        case 4:
+            if(no > 0)
+                printf("%d is Positive.", no);
+            else if(no < 0)
+                printf("%d is Negative.", no);
+            else
+                printf("Number is Zero.");
+            break;
+
+        case 5:
+        {
+            int temp = no;
+            int rev = 0, rem;
+
+            while(temp != 0)
+            {
+                rem = temp % 10;
+                rev = rev * 10 + rem;
+                temp = temp / 10;
+            }
+
+            printf("Reverse = %d", rev);
+            break;
+        }
+
+        case 6:
+        {
+            int temp = no;
+            int rem, sum = 0;
+
+            while(temp != 0)
+            {
+                rem = temp % 10;
+                sum = sum + rem;
+                temp = temp / 10;
+            }
+
+            printf("Sum of Digits = %d", sum);
+            break;
+        }
+
+        default:
+            printf("Invalid Choice");
+    }
+
+    return 0;
+}
