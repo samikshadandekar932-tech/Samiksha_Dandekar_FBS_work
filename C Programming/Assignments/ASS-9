@@ -1,0 +1,336 @@
+Q 1 Alternate no in array using function
+#include <stdio.h>
+void printAlternate(int arr[],int  );
+ void main() 
+ {
+    int n;
+
+    printf("Enter size of array: ");
+    scanf("%d", &n);
+
+    int arr[n];
+
+    printf("Enter %d elements:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    printAlternate(arr, n);  // function call
+
+}
+void printAlternate(int arr[],int n)
+{
+	printf("Alternate elements in array: ");
+    for (int i = 0; i < n; i += 2) 
+	{   // increase i by 2 each time
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+
+}
+Q2 Even Odd in array using function
+#include <stdio.h>
+void findOddEven(int arr[], int);
+void main() 
+{
+    int n;
+
+    printf("Enter size of array: ");
+    scanf("%d", &n);
+
+    int arr[n];
+
+    printf("Enter %d elements:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    findOddEven(arr, n);  // function call
+
+    
+}
+void findOddEven(int arr[], int n)
+ {
+    printf("Even numbers: ");
+    for (int i = 0; i < n; i++) {
+        if (arr[i] % 2 == 0) {
+            printf("%d ", arr[i]);
+        }
+    }
+
+    printf("\nOdd numbers: ");
+    for (int i = 0; i < n; i++) {
+        if (arr[i] % 2 != 0) {
+            printf("%d ", arr[i]);
+        }
+    }
+    printf("\n");
+}
+Q3 Find sum of array using function
+#include <stdio.h>
+int findSum(int arr[], int ); 
+void main() 
+{
+    int n;
+
+    printf("Enter size of array: ");
+    scanf("%d", &n);
+
+    int arr[n];
+
+    printf("Enter %d elements:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    int total = findSum(arr, n);
+
+    printf("Sum of all elements = %d\n", total);
+
+    
+}
+int findSum(int arr[], int n) 
+{
+    int sum = 0;
+    for (int i = 0; i < n; i++) {
+        sum += arr[i];   
+    }
+    return sum;  
+}
+Q4 Merge array using function
+#include <stdio.h>
+void mergeArrays(int arr1[], int , int arr2[], int , int result[]);
+void printArray(int arr[], int );
+void main() 
+{
+    int n1, n2;
+
+    printf("Enter size of first array: ");
+    scanf("%d", &n1);
+
+    int arr1[n1];
+    printf("Enter %d elements of first array:\n", n1);
+    for (int i = 0; i < n1; i++) {
+        scanf("%d", &arr1[i]);
+    }
+
+    printf("Enter size of second array: ");
+    scanf("%d", &n2);
+
+    int arr2[n2];
+    printf("Enter %d elements of second array:\n", n2);
+    for (int i = 0; i < n2; i++) {
+        scanf("%d", &arr2[i]);
+    }
+
+    int result[n1 + n2]; // merged array size
+
+    // Function call to merge arrays
+    mergeArrays(arr1, n1, arr2, n2, result);
+
+    printf("Merged array:\n");
+    printArray(result, n1 + n2);
+
+    
+}
+void mergeArrays(int arr1[], int n1, int arr2[], int n2, int result[]) {
+    int i, j;
+
+    // Copy first array
+    for (i = 0; i < n1; i++) {
+        result[i] = arr1[i];
+    }
+
+    // Copy second array
+    for (j = 0; j < n2; j++) {
+        result[i + j] = arr2[j];
+    }
+}
+
+// Function to print array
+void printArray(int arr[], int n) {
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+Q5 Find minimum and maximum in array using function
+#include <stdio.h>
+void findMinMax(int arr[], int , int *, int *); 
+void main() 
+{
+    int n;
+
+    printf("Enter size of array: ");
+    scanf("%d", &n);
+
+    int arr[n];
+
+    printf("Enter %d elements:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    int min, max;
+    findMinMax(arr, n, &min, &max);
+
+    printf("Minimum element = %d\n", min);
+    printf("Maximum element = %d\n", max);
+
+    
+}
+void findMinMax(int arr[], int n, int *min, int *max) 
+{
+    *min = arr[0];
+    *max = arr[0];
+
+    for (int i = 1; i < n; i++) {
+        if (arr[i] < *min) {
+            *min = arr[i];
+        }
+        if (arr[i] > *max) {
+            *max = arr[i];
+        }
+    }
+}
+Q 6 
+#include <stdio.h>
+void addArrays(int arr1[], int arr2[], int result[], int );
+void printArray(int arr[], int );
+void main() {
+    int n;
+
+    printf("Enter size of arrays: ");
+    scanf("%d", &n);
+
+    int arr1[n], arr2[n], result[n];
+
+    printf("Enter %d elements for first array:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr1[i]);
+    }
+
+    printf("Enter %d elements for second array:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr2[i]);
+    }
+
+    // Function call to add arrays
+    addArrays(arr1, arr2, result, n);
+
+    printf("Resultant array after addition:\n");
+    printArray(result, n);
+
+    
+}
+void addArrays(int arr1[], int arr2[], int result[], int n) {
+    for (int i = 0; i < n; i++) {
+        result[i] = arr1[i] + arr2[i];
+    }
+}
+
+// Function to print array
+void printArray(int arr[], int n) {
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+Q Reverse array using function
+#include<stdio.h>
+void reverseArray(int arr[], int );
+void printArray(int arr[], int );
+void main()
+{
+	
+    int n;
+
+    printf("Enter size of array: ");
+    scanf("%d", &n);
+
+    int arr[n];
+    printf("Enter %d elements:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    printf("Original array:\n");
+    printArray(arr, n);
+
+    // Function call to reverse
+    reverseArray(arr, n);
+
+    printf("Reversed array:\n");
+    printArray(arr, n);
+
+  
+}
+void reverseArray(int arr[], int n) {
+    int start = 0, end = n - 1, temp;
+
+    while (start < end) {
+        // Swap elements
+        temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+
+        start++;
+        end--;
+    }
+}
+
+// Function to print array
+void printArray(int arr[], int n) {
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");}
+Q sort array using function
+#include <stdio.h>
+
+// Function to sort array (Bubble Sort)
+void sortArray(int arr[], int n) {
+    int i, j, temp;
+    for (i = 0; i < n - 1; i++) {
+        for (j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {  
+                // Swap
+                temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+
+// Function to print array
+void printArray(int arr[], int n) {
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
+int main() {
+    int n;
+
+    printf("Enter size of array: ");
+    scanf("%d", &n);
+
+    int arr[n];
+    printf("Enter %d elements:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    printf("Original array:\n");
+    printArray(arr, n);
+
+    // Function call to sort
+    sortArray(arr, n);
+
+    printf("Sorted array:\n");
+    printArray(arr, n);
+
+    return 0;
+}
